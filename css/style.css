@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100vw;
+  background-color: #00005d;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  /* position: absolute; */
+  z-index: 1;
+}
+
+h1 {
+  font-family: 'Inconsolata', monospace;
+  margin: 0;
+  color: #e6e6e6;
+  font-size: 1.5em;
+  font-weight: 400;
+  padding: 10px 12px;
+  margin: 0;
+  position:relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  margin: 0 4%;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  font-size: large;
+  background-color: #4caf50;
+}
+
+button:hover {
+  background-color: white;
+}
+
+#note-board {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* style textarea */
+textarea  {
+  width: 190px;
+  height: 190px;
+  resize: none;
+  background-color: #fffead;
+  border: none;
+  outline: none;
+  padding: 28px;
+  cursor: pointer;
+  position: absolute; /* Will only work for absolute. Relative will cause element to try to be on the position it was relative to its parent. */
+  transition: transform .3s ease-in-out;
+}
+
+.drag {
+  cursor: grabbing;
+  transform: scale(1.08);
+  background-color: #a6e1fd61;
+}
